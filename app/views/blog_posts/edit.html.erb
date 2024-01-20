@@ -1,3 +1,7 @@
-<h1>Edit <%= @blog_post.title %></h1>
-<%= render partial: "form", locals: { blog_post: @blog_post } %>
-<%= button_to "delete", @blog_post, method: :delete, data: {turbo_confirm: "Are You Sure?"} %>
+<div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8">
+    <h1 class="text-2xl font-bold text-gray-900">Edit <%= @blog_post.title %></h1>
+
+    <%= render partial: "form", locals: { blog_post: @blog_post } %>
+
+    <%= button_to "Delete", @blog_post, method: :delete, data: { turbo_confirm: "Are You Sure?" }, class: "mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+</div>

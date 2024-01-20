@@ -1,10 +1,8 @@
-<div>
-    <h2><%= @blog_post.title %></h2>
-    <p><%= @blog_post.body %></p>
+<div class="max-w-2xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-semibold text-gray-800"><%= @blog_post.title %></h2>
+    <p class="mt-4 text-gray-600"><%= @blog_post.body %></p>
     
-    <% if  user_signed_in? %>
-        <%= link_to "edit blog posts", edit_blog_post_path %>        
+    <% if user_signed_in? %>
+        <%= link_to "Edit Blog Post", edit_blog_post_path, class: "mt-4 inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
     <% end %>
-
-    <%= link_to "all blog posts", blog_posts_path %>
 </div>
