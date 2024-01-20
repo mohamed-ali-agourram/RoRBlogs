@@ -74,3 +74,9 @@ gem "dotenv-rails", "~> 2.8"
 gem "devise", "~> 4.9"
 
 gem "tailwindcss-rails", "~> 2.3"
+
+gem "rspec-rails", "~> 6.1"
+
+gem "factory_bot_rails", "~> 6.4"
+
+gem "faker", "~> 3.2"
