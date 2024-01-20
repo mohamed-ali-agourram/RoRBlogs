@@ -1,5 +1,6 @@
 <div class="max-w-2xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-semibold text-gray-800"><%= @blog_post.title %></h2>
+    <%= render partial: "badge", locals: { blog_post: @blog_post } %>
     <p class="mt-4 text-gray-600"><%= @blog_post.body %></p>
     
     <% if user_signed_in? %>
