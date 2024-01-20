@@ -1,5 +1,7 @@
 <div>
     <h2><%= @blog_post.title %></h2>
     <p><%= @blog_post.body %></p>
+    <%= link_to "edit blog posts", edit_blog_post_path %>
+    <br>
     <%= link_to "all blog posts", blog_posts_path %>
 </div>
