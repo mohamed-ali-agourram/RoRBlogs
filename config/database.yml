@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: rubyblog_development
+  database: rorblogs_development
 
 test:
   <<: *default
-  database: rubyblog_test
+  database: rorblogs_test
 
 production:
   <<: *default
-  database: rubyblog_production
+  database: rorblogs_production
