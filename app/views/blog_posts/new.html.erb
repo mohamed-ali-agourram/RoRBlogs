@@ -3,8 +3,8 @@
     <div>
         <%= form.label :title %> <br>
         <%= form.text_field :title %>
-        <% if @blog_post.errors.any? %>
-            <% @blog_post.errors.full_messages_for(:title).each do |message| %>
+        <% if form.object.errors.any? %>
+            <% form.object.errors.full_messages_for(:title).each do |message| %>
                 <div style="color: red;"><%= message %></div>
             <% end %>
         <% end %>
@@ -12,8 +12,8 @@
     <div>
         <%= form.label :body %> <br>
         <%= form.text_area :body %>
-        <% if @blog_post.errors.any? %>
-            <% @blog_post.errors.full_messages_for(:body).each do |message| %>
+        <% if form.object.errors.any? %>
+            <% form.object.errors.full_messages_for(:body).each do |message| %>
                 <div style="color: red;"><%= message %></div>
             <% end %>
         <% end %>
