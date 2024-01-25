@@ -1,5 +1,7 @@
 class BlogPost < ApplicationRecord
-  validates :title, :body, presence: true
+  has_rich_text :content
+
+  validates :title, :content, presence: true
 
   #Model scoppes
   scope :sorted, -> { order(published_at: :desc, updated_at: :desc) }

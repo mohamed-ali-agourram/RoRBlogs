@@ -1,4 +1,4 @@
-<%= form_for blog_post, class: "space-y-4" do |form| %>
+<%= form_for blog_post do |form| %>
     <div>
         <%= form.label :title, class: "block text-sm font-medium text-gray-700" %>
         <%= form.text_field :title, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
@@ -9,9 +9,8 @@
         <% end %>
     </div>
 
-    <div>
-        <%= form.label :body, class: "block text-sm font-medium text-gray-700" %>
-        <%= form.text_area :body, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", rows: 5 %>
+    <div class="mt-2">
+        <%= form.rich_text_area :content %>
         <% if form.object.errors.any? %>
             <% form.object.errors.full_messages_for(:body).each do |message| %>
                 <div class="text-red-500 text-xs italic"><%= message %></div>
